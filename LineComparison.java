@@ -15,7 +15,7 @@ public class LineComparison {
         double y1 = scanner.nextDouble();
         System.out.print("Enter The value Of y2 : ");
         double y2 = scanner.nextDouble();
-        lineLength = sqrt( (x2 - x1) * 2 + (y2 - y1) * 2);
+        lineLength = sqrt( (x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
         System.out.println(lineLength);
 
     }
