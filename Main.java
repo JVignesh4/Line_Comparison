@@ -8,6 +8,5 @@ public class Main {
         System.out.println("Length of Line 2 is: " + lengthTwo);
         obj.checkLineEquality(lengthOne, lengthTwo);
         obj.checkLineComparison(lengthOne, lengthTwo);
-
     }
 }
