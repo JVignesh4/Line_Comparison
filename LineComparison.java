@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-import static java.lang.Math.sqrt;
 
 public class LineComparison {
     static Scanner sc = new Scanner(System.in);
