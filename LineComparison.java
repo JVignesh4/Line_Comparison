@@ -1,46 +1,28 @@
-import java.util.Scanner;
 
 
 public class LineComparison {
-    static Scanner sc = new Scanner(System.in);
-    static double lengthLine_X = 0;
-    static double lengthLine_Y = 0;
+    public double calculateLength(int x1, int y1, int x2, int y2) {
+        // Calculating Length of points
+        return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+    }
 
-    static void equals() {
-        System.out.println("Enter the value of x4: ");
-        double x4 = sc.nextDouble();
-        System.out.println("Enter the value of x3: ");
-        double x3 = sc.nextDouble();
-        System.out.println("Enter the value of y4: ");
-        double y4 = sc.nextDouble();
-        System.out.println("Enter the value of y3: ");
-        double y3 = sc.nextDouble();
-        lengthLine_Y = Math.sqrt((x4 - x3) * (x4 - x3) + (y4 - y3) * (y4 - y3));
-        System.out.println("Length of line is: " + lengthLine_Y);
-
-        if (lengthLine_Y == lengthLine_X) {
-            System.out.println("Two lines are equal");
+    public void checkLineEquality(Double lengthOne, Double lengthTwo) {
+        boolean equals = lengthOne.equals(lengthTwo);
+        if (equals) {
+            System.out.println("Lines are Equal");
         } else {
-            System.out.println("Two lines are not equal");
+            System.out.println("Lines are not Equal");
         }
     }
 
-    public static void main(String[] args) {
-
-        System.out.println("Enter the value of x1: ");
-        double x1 = sc.nextDouble();
-        System.out.println("Enter the value of x2: ");
-        double x2 = sc.nextDouble();
-
-        System.out.println("Enter the value of y1: ");
-        double y1 = sc.nextDouble();
-        System.out.println("Enter the value of y2: ");
-        double y2 = sc.nextDouble();
-
-        lengthLine_X = Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
-        System.out.println("Length of line is: " + lengthLine_X);
-
-        equals();
-
+    public void checkLineComparison(Double lengthOne, Double lengthTwo) {
+        int lineCompare = lengthOne.compareTo(lengthTwo);
+        if (lineCompare < 0) {
+            System.out.println("Line 1 length is less than line 2");
+        } else if (lineCompare > 0) {
+            System.out.println("Line 1 length is grater than line 2");
+        } else {
+            System.out.println("Line 1 length is Equal to line 2");
+        }
     }
 }
